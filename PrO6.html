@@ -1,0 +1,220 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Biosphere - Biotechnology</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #eaf4fb;
+            color: #23445c;
+            text-align: center;
+        }
+
+        /* Fixed Position */
+        .header {
+            background: #0877a8;
+            color: white;
+            padding: 15px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            box-sizing: border-box;
+            z-index: 2;
+        }
+
+        .content {
+            margin-top: 65px;
+        }
+
+        /* Static Position */
+        .hero {
+            background: #c8e8f5;
+            padding: 20px;
+            position: static;
+        }
+
+        h1, h2 {
+            color: #0877a8;
+        }
+
+        /* Navigation */
+        nav {
+            padding: 20px;
+            border-top: 1px solid skyblue;
+            border-bottom: 1px solid skyblue;
+        }
+
+        a {
+            color: #0877a8;
+            margin: 10px;
+        }
+
+        /* Sticky Position */
+        .department {
+            background: #0877a8;
+            color: white;
+            padding: 12px;
+            position: sticky;
+            top: 47px;
+            z-index: 1;
+        }
+
+        /* Relative Position */
+        .container {
+            height: 440px;
+            max-width: 850px;
+            background: #c8e8f5;
+            position: relative;
+            overflow: hidden;
+            margin: 20px auto;
+            border-radius: 10px;
+        }
+
+        /* Absolute Position */
+        .container img {
+            width: 70%;
+            height: 80%;
+            object-fit: cover;
+            position: absolute;
+            border-radius: 8px;
+        }
+
+        .top-left {
+            top: 10px;
+            left: 10px;
+        }
+
+        .top-right {
+            top: 10px;
+            right: 10px;
+        }
+
+        .bottom-left {
+            bottom: 10px;
+            left: 10px;
+        }
+
+        .bottom-right {
+            bottom: 10px;
+            right: 10px;
+        }
+
+        .center {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        button {
+            background: #0877a8;
+            color: white;
+            border: none;
+            padding: 12px 18px;
+            margin: 5px 3px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #075477;
+        }
+
+        @media (max-width: 650px) {
+            .container {
+                height: 300px;
+                width: 90%;
+            }
+
+            .container img {
+                width: 85%;
+                height: 70%;
+            }
+
+            button {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Fixed Header -->
+    <div class="header">
+        <b>🧬 BIOSPHERE - BIOTECHNOLOGY</b>
+    </div>
+
+    <div class="content">
+
+        <!-- Static Position -->
+        <div class="hero">
+            <h1>Biotechnology-Driven Medical Innovations</h1>
+            <p>
+                Discover how biotechnology is transforming modern medicine
+                through scientific research, advanced technology and innovative healthcare solutions.
+            </p>
+        </div>
+
+        <!-- Navigation -->
+        <nav>
+            <a href="#about">About</a> |
+            <a href="#position">Positioning</a> |
+            <a href="#about">Explore</a>
+        </nav>
+
+        <!-- Sticky Department -->
+        <div class="department">
+            <b>Department of Medical Biotechnology</b>
+        </div>
+
+        <!-- About Section -->
+        <h2 id="about">🧬 Explore Medical Biotechnology</h2>
+
+        <p>
+            Biotechnology plays an important role in modern healthcare.
+            It helps develop advanced medicines, vaccines and innovative medical treatments.
+        </p>
+
+        <hr>
+
+        <!-- CSS Positioning -->
+        <h2 id="position">🔬 CSS Positioning Elements</h2>
+
+        <p>
+            Use the buttons below to move the biotechnology image
+            to different positions inside the container.
+        </p>
+
+        <!-- Relative Container -->
+        <div class="container">
+
+            <!-- Absolute Image -->
+            <img src="biosphere.jpg" id="photo"
+                 class="center" alt="Biotechnology">
+
+        </div>
+
+        <h3>Try It Yourself:</h3>
+
+        <button onclick="move('top-left')">Top Left »</button>
+        <button onclick="move('top-right')">Top Right »</button>
+        <button onclick="move('bottom-left')">Bottom Left »</button>
+        <button onclick="move('bottom-right')">Bottom Right »</button>
+        <button onclick="move('center')">Centered »</button>
+
+    </div>
+
+    <script>
+        function move(position) {
+            document.getElementById("photo").className = position;
+        }
+    </script>
+
+</body>
+</html>
